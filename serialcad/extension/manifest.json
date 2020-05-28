@@ -1,0 +1,32 @@
+
+{
+    "name": "TinkerCad lint",
+    "version": "1.0",
+    "description": "tinkercad to sockets",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.tinkercad.com/things/*/editel"
+            ],
+            "js": [
+                "script/socket.io.js",
+                "script/new.js",
+                "script/element.js"
+                
+            ],
+            "css": [
+                "resource/style.css"
+            ]
+        }
+    ],
+    "browser_action": {
+        "default_icon": "resource/icon.png",
+        "default_popup": "page/popup.html",
+        "default_title": "TinkerCad lint"
+        
+    },
+    "icons": {
+        "16": "resource/icon.png"
+    },
+    "manifest_version": 2
+}
